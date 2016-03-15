@@ -14,5 +14,6 @@ Features:
 
 ### Added for second half of course
     4) View actual images with gaze location from saved PNG files.
-    5) Implemented a play button to view a movie of data. 
-    6) Hilbert transform ? 
+    5) Implement a play button to view a movie of data. 
+    6) Generalize spike-field relationship to pupil size and experiment condition.
+    7) Hilbert transform ? ( http://www.cv-foundation.org/openaccess/content_cvpr_workshops_2014/W09/papers/Hossain_Understanding_Effects_of_2014_CVPR_paper.pdf )
