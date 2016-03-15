@@ -1,0 +1,71 @@
+function fourier_example(dat)
+% This code does a fourier analysis on pupil size progression 
+% You should pass in the dat data structure from dat=importfile();
+% Compare pupilsize timeseries 
+if nargin < 1
+    dat = importfile;
+end
+%%
+regretPsize = dat.d.result2(dat.d.regretCond==1,:);
+nonregretPsize = dat.d.result2(dat.d.regretCond==2,:);
+figure;
+subplot(2,1,1); plot(regretPsize');title('regretPsize'); 
+subplot(2,1,2); plot(nonregretPsize'); title('nonregretPsize');
+%% Cen
+
+%% Get selection of analaysis
+test=regretPsize(4,:);
+figure;
+subplot(2,1,1);plot(test');title('Timeseries of pupil size in regret trial # 4');
+yfft=fft(test);
+yfft_mag = abs(yfft); yfft_ph = angle(yfft);
+% stem(yfft_mag)
+y=test;
+Npoints = length(y);
+F = [-Npoints/2:Npoints/2-1]./Npoints; % construct frequency axis
+yfft_mag = fftshift(yfft_mag); % align output, see note below
+subplot(2,1,2);stem(F,yfft_mag); title('Fourier analysis');ylim([0,300]);
+xlabel('Frequency (Fs^{-1})');
+%% Get selection of anala 11,
+test=nonregretPsize(11,:);
+figure; 
+subplot(2,1,1);plot(test');title('Timeseries of pupil size in nonregret trial # 11')
+yfft=fft(test);
+yfft_mag = abs(yfft); yfft_ph = angle(yfft);
+% stem(yfft_mag)
+y=test;
+Npoints = length(y);
+F = [-Npoints/2:Npoints/2-1]./Npoints; % construct frequency axis
+yfft_mag = fftshift(yfft_mag); % align output, see note below
+subplot(2,1,2);stem(F,yfft_mag);title('Fourier analysis');ylim([0,300]);
+xlabel('Frequency (Fs^{-1})');
+
+
+
+%% Get selection of analaysis
+test=mean(regretPsize);
+figure;
+subplot(2,1,1);plot(test');title('Timeseries of pupil size in average regret trial');
+yfft=fft(test);
+yfft_mag = abs(yfft); yfft_ph = angle(yfft);
+% stem(yfft_mag)
+y=test;
+Npoints = length(y);
+F = [-Npoints/2:Npoints/2-1]./Npoints; % construct frequency axis
+yfft_mag = fftshift(yfft_mag); % align output, see note below
+subplot(2,1,2);stem(F,yfft_mag); title('Fourier analysis');ylim([0,300]);
+xlabel('Frequency (Fs^{-1})');
+%% Get selection of anala 11,
+test=mean(nonregretPsize);
+figure; 
+subplot(2,1,1);plot(test');title('Timeseries of pupil size in average nonregret trial')
+yfft=fft(test);
+yfft_mag = abs(yfft); yfft_ph = angle(yfft);
+% stem(yfft_mag)
+y=test;
+Npoints = length(y);
+F = [-Npoints/2:Npoints/2-1]./Npoints; % construct frequency axis
+yfft_mag = fftshift(yfft_mag); % align output, see note below
+subplot(2,1,2);stem(F,yfft_mag);title('Fourier analysis');ylim([0,300]);
+xlabel('Frequency (Fs^{-1})');
+end
