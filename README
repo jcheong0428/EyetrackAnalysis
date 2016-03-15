@@ -1,2 +1,11 @@
-This is the final project for 
-Analysis of Neural Data
+EyetrackGrapher
+GUI for visualizing timeseries eyetracking data. 
+Features: 
+## Added by the first half of course
+    1) Allows user to cycle through eyetracking data (Gaze Location, Pupil Size, and Event) for each timepoint. 
+    2) Allows user to compare and view both raw data and interpolated data.
+    3) Provides general information about sampling rate, number of samples, and interpolation rate (signal dropout).
+### Added for second half of course
+    4) View actual images with gaze location from saved PNG files.
+    5) Implemented a play button to view a movie of data. 
+    6) Hilbert transform ? 
