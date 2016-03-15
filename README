@@ -1,10 +1,17 @@
-EyetrackGrapher
-GUI for visualizing timeseries eyetracking data. 
+EyetrackGrapher project for Analyasis of Neural Data course
+
+This repostiory contains functions that help visualize and analyze timeseries eyetracking data.
+
+importfile : import Eyetracking data from Eyetribe.
+regret_study : Regret study on which data was collected
+EyetrackGrapher : Function that plots eyetracking data 
+
 Features: 
 ## Added by the first half of course
     1) Allows user to cycle through eyetracking data (Gaze Location, Pupil Size, and Event) for each timepoint. 
-    2) Allows user to compare and view both raw data and interpolated data.
-    3) Provides general information about sampling rate, number of samples, and interpolation rate (signal dropout).
+    2) Allows user to compare and view both raw and interpolated data.
+    3) Provides data integrity checks including sampling rate, number of samples, and interpolation rate (signal dropout).
+
 ### Added for second half of course
     4) View actual images with gaze location from saved PNG files.
     5) Implemented a play button to view a movie of data. 
