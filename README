@@ -20,5 +20,8 @@ Features:
     6) Fourier transform on pupil size for different conditions
     	dat = importfile();
     	fourier_example(dat);
-    7) Generalize spike-field relationship to pupil size and experiment condition.
+    7) Generalize spike-field relationship to pupil size and experiment condition. Spike triggered averages calculated and displayed.
+	fourier_example(dat);
     8) Hilbert transform ( http://www.cv-foundation.org/openaccess/content_cvpr_workshops_2014/W09/papers/Hossain_Understanding_Effects_of_2014_CVPR_paper.pdf )
+	hilbert_example(dat);
+
