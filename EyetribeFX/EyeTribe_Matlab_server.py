@@ -12,7 +12,7 @@ from pytribe import EyeTribe
 DEBUG = True
 
 MLIP = 'localhost'
-MLPORT = 1115
+MLPORT = 3337
 
 
 # # # # #

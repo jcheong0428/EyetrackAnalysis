@@ -36,21 +36,21 @@ if nargin < 1
     psize_intp_method = 'extend';
 elseif  nargin< 2
     dir = pwd;
-    filename = [dir,'/data/test/',filename];
+    filename = [dir,'/data/',filename];
     loadBehav = 1;
-    bfilename = [dir,'/data/test/',filename(1:end-3)];
+    bfilename = [dir,'/data/',filename(1:end-3)];
     intp_method = 'spline';
     psize_intp_method = 'extend';
 elseif  nargin< 3
     dir = pwd;
-    filename = [dir,'/data/test/',filename];
-    bfilename = [dir,'/data/test/',filename(1:end-3)];
+    filename = [dir,'/data/',filename];
+    bfilename = [dir,'/data/',filename(1:end-3)];
     intp_method = 'spline';
     psize_intp_method = 'extend';
 elseif  nargin< 4
     dir = pwd;
-    filename = [dir,'/data/test/',filename];
-    bfilename = [dir,'/data/test/',filename(1:end-3)];
+    filename = [dir,'/data/',filename];
+    bfilename = [dir,'/data/',filename(1:end-3)];
     psize_intp_method = 'extend';
 elseif  nargin< 5
     dir = pwd;

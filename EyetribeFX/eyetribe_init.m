@@ -15,7 +15,7 @@ function [success, connection] = eyetribe_init(logfilename)
 
 % open new connection
 disp('Opening new connection.')
-connection = tcpip('localhost', 1115);  % 5556 for terminal started process
+connection = tcpip('localhost', 3337);  % 5556 for terminal started process
 fopen(connection);
 
 % send socket initialization message

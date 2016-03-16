@@ -54,8 +54,8 @@ end
 if behav == 1
 % Initialize connection
 % [stat,cmdOut]=system('python /Users/jinhyuncheong/Dropbox/regret/python_source/EyeTribe_Matlab_server.py');
-% [stat,~]=system('/Applications/EyeTribe/EyeTribe --framerate=60 &')
-% [stat,~]=system('python /Users/jinhyuncheong/Dropbox/regret/python_source/EyeTribe_Matlab_server.py &')
+[stat,~]=system('/Applications/EyeTribe/EyeTribe --framerate=60 &')
+[stat,~]=system('python /Users/jinhyuncheong/EyetrackAnalysis/EyetribeFX/EyeTribe_Matlab_server.py &')
 [success, connection] = eyetribe_init(fname);
 %% Init Labjack
 % lj = labJack('verbose',false);
