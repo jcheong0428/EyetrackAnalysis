@@ -290,11 +290,20 @@ if loadBehav ==1
             d.regretCond(i,1) = 2;  % no regret
         end
     end
-%% Bin analyses to different trial types
+%% Bin data to different trial types
     d.choice1 = {};
     d.choice2 = [];
     d.result1 = [];
-    d.result2 = []; 
+    d.result2 = [];
+    
+    d.choice1x = {};
+    d.choice2x = [];
+    d.result1x = [];
+    d.result2x = []; 
+    d.choice1y = {};
+    d.choice2y = [];
+    d.result1y = [];
+    d.result2y = []; 
     trial = 1;
     for i = 1:length(intp.psize)
         cond = intp.event_num(i);
@@ -305,18 +314,30 @@ if loadBehav ==1
                     x=x+1;
                 end
                 d.choice1{i,1} = {intp.psize(i:x-1,1)'};
+                d.choice1x{i,1} = {intp.avgx(i:x-1,1)'};
+                d.choice1y{i,1} = {intp.avgy(i:x-1,1)'};
             case {2,3} % chose left / right
-                d.choice2(trial,:) = intp.psize(i:i+59,1)'; % 2 second ISI
+                d.choice2(trial,:) = intp.psize(i:i+59,1)'; % 2 second ISI.
+                d.choice2x(trial,:) = intp.avgx(i:i+59,1)'; % 2 second ISI
+                d.choice2y(trial,:) = intp.avgy(i:i+59,1)'; % 2 second ISI
             case {4,5} % result left / right
                 d.result1(trial,:) = intp.psize(i:i+119,1)'; % 4 second ISI
+                d.result1x(trial,:) = intp.avgx(i:i+119,1)'; % 4 second ISI
+                d.result1y(trial,:) = intp.avgy(i:i+119,1)'; % 4 second ISI
             case {6,7} % regret result left right
                 d.result2(trial,:) = intp.psize(i:i+119,1)'; % 4 second ISI
+                d.result2x(trial,:) = intp.avgx(i:i+119,1)'; % 4 second ISI
+                d.result2y(trial,:) = intp.avgy(i:i+119,1)'; % 4 second ISI
                 trial = trial +1;
         end
     end
 %% Compare pupilsize timeseries 
     d.regretPsize = d.result2(d.regretCond==1,:);
     d.nonregretPsize = d.result2(d.regretCond==2,:);
+    d.regretx = d.result2x(d.regretCond==1,:);
+    d.regrety = d.result2y(d.regretCond==1,:);
+    d.nonregretx = d.result2x(d.regretCond==2,:);
+    d.nonregrety =  d.result2y(d.regretCond==2,:);
 %% Save to dat
     dat.d = d; 
     dat.p = p;

@@ -90,7 +90,7 @@ function b_callback(es,ed)
     global zeta af ax1 ax2 ax3 ax4 x1 x2 y1 y2 ts imts;
     zeta = floor(es.Value);
     sz=0;
-    for i = 1:min(zeta,100)
+    for i = 1:min(zeta,100) % Determines the size of the crosshair
         if zeta-i~=0 && abs(xs(zeta)-xs(zeta-i)) < 100 && abs(ys(zeta)-ys(zeta-i)) < 100
             sz=sz+1;
         end
@@ -138,11 +138,14 @@ end
 function bplay_callback(hObject, eventdata, handles)
     global b zeta xs bplay
     while get(bplay,'Value')
-        zeta = zeta+30;
+        zeta = zeta+10;
+        if zeta > numel(xs) % reset if out of bounds
+            zeta = 1;
+        end
         set(b,'Value',zeta);
         b_callback(b);
         drawnow
-        WaitSecs(.1);
+        WaitSecs(.05);
     end
 end
 function plotbase()
