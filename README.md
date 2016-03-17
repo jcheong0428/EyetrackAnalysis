@@ -1,4 +1,4 @@
-EyetrackGrapher project for Analyasis of Neural Data course
+*EyetrackGrapher project for Analyasis of Neural Data course*
 
 This repostiory contains functions that help visualize and analyze timeseries eyetracking data.
 
