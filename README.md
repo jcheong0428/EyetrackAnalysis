@@ -1,6 +1,6 @@
 ## EyetrackGrapher project for Analyasis of Neural Data course
 
-This repostiory contains functions that help visualize and analyze timeseries eyetracking data collected by Eyetribe.
+This repository contains functions that visualize and analyze timeseries eyetracking data collected by Eyetribe.
 
 /EyetribeFX contains files from https://github.com/esdalmaijer/EyeTribe-Toolbox-for-Matlab.git under GNU lincense
 All other files, folders under MIT LICENSE 
@@ -9,7 +9,7 @@ All other files, folders under MIT LICENSE
 	MATLAB
 	PSYCHTOOLBOX (http://psychtoolbox.org/)
 
-### Basic functions
+### Functions
 
 importfile : import Eyetracking data from Eyetribe.
 regret_study : Regret study on which data was collected
