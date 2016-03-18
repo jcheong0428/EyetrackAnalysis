@@ -21,12 +21,9 @@ visitation_example(under construction) : Compare number of visits to ROI.
 
 ##Features: 
 
-### Added by the first half of course
 1. Allows user to cycle through eyetracking data (Gaze Location, Pupil Size, and Event) for each timepoint. 
 2. Allows user to compare and view both raw and interpolated data.
 3. Provides data integrity checks including sampling rate, number of samples, and interpolation rate (signal dropout).
-
-### Added for second half of course
 4. View actual images with gaze location from saved PNG files.
     
     	dat = importfile();
