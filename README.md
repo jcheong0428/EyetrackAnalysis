@@ -1,4 +1,4 @@
-## EyetrackGrapher project for Analyasis of Neural Data course
+## EyetrackGrapher project 
 
 This repository contains functions that visualize and analyze timeseries eyetracking data collected by Eyetribe.
 
