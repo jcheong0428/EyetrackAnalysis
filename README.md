@@ -61,7 +61,7 @@ visitation_example(under construction) : Compare number of visits to ROI.
 9. ROI analysis on gaze coordinates data. We track how many visits to the ROI occur and compare it for the regret and nonregret conditions. We also compare the portion of gaze in the ROI for the two conditions. 
 	     
 	    visitation_example(dat); 
-	    visitation_example(dat,AOI);  % AOI optional for later use
+	    visitation_example(dat,AOI);  % AOI option for later use
 
         Figure 1: Plots the gaze coordinates for the regret condition  
         Figure 2: Plots the gaxe coordinates for the nonregret condition  
