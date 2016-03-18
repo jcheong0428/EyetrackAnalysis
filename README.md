@@ -11,13 +11,13 @@ All other files, folders under MIT LICENSE
 
 ### Functions
 
-importfile : import Eyetracking data from Eyetribe.
-regret_study : Regret study on which data was collected
-EyetrackGrapher : Function that plots eyetracking data 
-EyetrackTracker(under construction) : Real time GUI for eyetracking data visualization
-fourier_example : Example of applying Fourier to pupil size data ( will be using Pwelch in future)
-hilbert_example : Example of applying Hilbert transform to pupil size data
-visitation_example(under construction) : Compare number of visits to ROI. 
+importfile : import Eyetracking data from Eyetribe.  
+regret_study : Regret study on which data was collected  
+EyetrackGrapher : Function that plots eyetracking data   
+EyetrackTracker(under construction) : Real time GUI for eyetracking data visualization  
+fourier_example : Example of applying Fourier to pupil size data ( will be using Pwelch in future)  
+hilbert_example : Example of applying Hilbert transform to pupil size data  
+visitation_example(under construction) : Compare number of visits to ROI.   
 
 ##Features: 
 
@@ -58,3 +58,10 @@ visitation_example(under construction) : Compare number of visits to ROI.
         Figure 1: Plots unwrapped hilbert transform for the trial average of three conditions. 
         Figure 2: Plots unwrapped hilbert transform for each trials in three conditions. 
 
+9. ROI analysis on gaze coordinates data. We track how many visits to the ROI occur and compare it for the regret and nonregret conditions. We also compare the portion of gaze in the ROI for the two conditions. 
+	     visitation_example(dat); 
+	     visitation_example(dat,AOI);  % AOI optional for later use
+
+	Figure 1: Plots the gaze coordinates for the regret condition
+	Figure 2: Plots the gaxe coordinates for the nonregret condition
+	Figure 3: Compare the number of visits and the proprotion in CF AOI for two conditions.
