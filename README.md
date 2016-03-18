@@ -63,6 +63,6 @@ visitation_example(under construction) : Compare number of visits to ROI.
 	    visitation_example(dat); 
 	    visitation_example(dat,AOI);  % AOI option for later use
 
-        Figure 1: Plots the gaze coordinates for the regret condition  
-        Figure 2: Plots the gaxe coordinates for the nonregret condition  
+        Figure 1: Plots the gaze coordinates for the regret condition as heatmap
+        Figure 2: Plots the gaxe coordinates for the nonregret condition as heatmap
         Figure 3: Compare the number of visits and the proprotion in CF AOI for two conditions.  
